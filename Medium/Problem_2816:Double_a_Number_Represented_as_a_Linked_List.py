@@ -11,22 +11,29 @@ Return the head of the linked list after doubling it.
 #         self.next = next
 class Solution:
     def doubleIt(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        agg = head
-        total_val = 0
-        while agg != None:
-            total_val = total_val*10 + agg.val
-            agg = agg.next
+                
+        temp = ListNode(0,head)
 
+        head = temp
+
+        curr = head
+
+        while curr:
+
+            curr.val = (curr.val *2 ) % 10 
+
+            if curr.next and curr.next.val > 4:
+                curr.val = curr.val + 1 
+            
+            curr = curr.next 
         
-        total_val = total_val * 2
-        prev_node = ListNode(total_val%10)
-        total_val = total_val // 10
-
-        while total_val > 0:
-            new_node = ListNode(total_val%10,prev_node)
-
-            total_val = total_val // 10
-            prev_node = new_node
+        if head.val == 0:
+            head = head.next
         
+        return head
+    
 
-        return prev_node
+'''
+This is a better solution. The program only traversese through the LinkedList once. Not forming a new linked (Compared to prev solution)
+also makes the solution more memory efficient. 
+'''
