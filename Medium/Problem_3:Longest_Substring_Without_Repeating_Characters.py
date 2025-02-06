@@ -11,6 +11,28 @@ class Solution(object):
         """
 
         maxi = 0 
+        l,r = 0,0
+        while r < len(s):
+
+            while s[r] in s[l:r]:
+                l+=1 
+            maxi = max(maxi,r-l+1)
+            r += 1
+        return maxi
+                
+
+
+'''
+## BRUTE FORCE SOLUTION. CAME UP WITH BETTER SOLUTION AFTER DSA PRACTICE
+
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+
+        maxi = 0 
         for i in range(len(s)):
             end = i
 
@@ -24,4 +46,4 @@ class Solution(object):
                 maxi = end - i + 1
         
         return maxi
-                
+'''
