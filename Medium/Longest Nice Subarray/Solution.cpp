@@ -5,19 +5,15 @@ class Solution {
             int x = nums[l];
     
             while(r < nums.size()){
-    
-                if((x ^ nums[r]) == (x + nums[r])){
-                    x = x ^ nums[r];
-                    res = max(res,r - l + 1);
-                }
                 
-                else{
-                    while((x ^ nums[r]) != (x + nums[r]) && l<r){
-                        x = x ^ nums[l];
-                        l++;
-                    }
-                    x = x ^ nums[r];
+                while((x ^ nums[r]) != (x + nums[r]) && l<r){
+                    x = x ^ nums[l];
+                    l++;
                 }
+    
+                x = x ^ nums[r];
+                res = max(res,r - l + 1);
+            
                 r++;
             }
     
