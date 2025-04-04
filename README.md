@@ -1,7 +1,7 @@
 
 # LeetCode Solutions
 
-This repository contains my solutions to LeetCode problems, written in Python and C++. The problems cover various difficulty levels (easy, medium, hard) and touch upon a variety of fundamental and advanced topics. Will add more solutions as I keep working on my LeetCode Journey. All the solutions are uploaded in this repository only after they pass all the Leetcode testcases of the quesiton. 
+This repository contains my solutions to LeetCode problems, written in Python. The problems cover various difficulty levels (easy, medium, hard) and touch upon a variety of fundamental and advanced topics. Will add more solutions as I keep working on my LeetCode Journey. All the solutions are uploaded in this repository only after they pass all the Leetcode testcases of the quesiton. 
 
 #### Repository Structure
 
@@ -14,7 +14,7 @@ In each directory, the name of the question is kept as the folder name that cont
 
 - **Problem description** (as per LeetCode) in a MarkDown File. 
 - **Python code**: My Python 3 solution in the file `solution.py`
-- **C++ Code**: My C++ solution in the file `solution.cpp`
+<!-- - **C++ Code**: My C++ solution in the file `solution.cpp` -->
 
 
 ##  Motivation
